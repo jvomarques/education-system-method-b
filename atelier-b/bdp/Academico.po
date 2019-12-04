@@ -1,0 +1,109 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(18) & _f(42) & WellDefinedness_getIRA.3,(_f(69) => _f(74));
+_f(1) & _f(2) & _f(18) & _f(42) & WellDefinedness_getIRA.2,(_f(69) => _f(71));
+_f(1) & _f(2) & _f(18) & _f(42) & WellDefinedness_getIRA.1,(_f(69) => _f(70));
+_f(1) & _f(2) & _f(18) & WellDefinedness_Precondition_getIRA.1,(_f(73) & _f(56) & _f(62) & _f(72) & _f(66) & _f(65) & _f(69) => _f(71));
+_f(1) & _f(2) & _f(18) & _f(38) & WellDefinedness_registerGrade.2,(_f(69) => _f(71));
+_f(1) & _f(2) & _f(18) & _f(38) & WellDefinedness_registerGrade.1,(_f(69) => _f(70));
+_f(1) & _f(2) & _f(18) & _f(38) & registerGrade.3,(_f(3) & _f(36) => _f(41));
+_f(1) & _f(2) & _f(18) & _f(38) & registerGrade.2,(_f(3) & _f(16) => _f(40));
+_f(1) & _f(2) & _f(18) & _f(38) & registerGrade.1,(_f(3) & _f(14) => _f(39));
+_f(1) & _f(2) & _f(18) & _f(30) & doTest.4,(_f(33) & _f(3) & _f(12) => _f(34));
+_f(1) & _f(2) & _f(18) & _f(30) & doTest.3,(_f(31) & _f(32) & _f(3) & _f(36) => _f(37));
+_f(1) & _f(2) & _f(18) & _f(30) & doTest.2,(_f(31) & _f(32) & _f(3) & _f(16) => _f(35));
+_f(1) & _f(2) & _f(18) & _f(30) & doTest.1,(_f(31) & _f(32) & _f(3) & _f(12) => _f(34));
+_f(1) & _f(2) & _f(18) & _f(28) & registerStudent.1,(_f(3) & _f(10) => _f(29));
+_f(1) & _f(2) & _f(18) & _f(26) & addSubjectToCourse.1,(_f(3) & _f(8) => _f(27));
+_f(1) & _f(2) & _f(18) & _f(22) & addTeacher.2,(_f(3) & _f(6) => _f(25));
+_f(1) & _f(2) & _f(18) & _f(22) & addTeacher.1,(_f(3) & _f(23) => _f(24));
+_f(1) & _f(2) & _f(18) & _f(19) & addStudent.2,(_f(3) & _f(6) => _f(21));
+_f(1) & _f(2) & _f(18) & _f(19) & addStudent.1,(_f(3) & _f(4) => _f(20));
+_f(1) & _f(2) & Initialisation.7,(_f(3) & _f(16) => _f(17));
+_f(1) & _f(2) & Initialisation.6,(_f(3) & _f(14) => _f(15));
+_f(1) & _f(2) & Initialisation.5,(_f(3) & _f(12) => _f(13));
+_f(1) & _f(2) & Initialisation.4,(_f(3) & _f(10) => _f(11));
+_f(1) & _f(2) & Initialisation.3,(_f(3) & _f(8) => _f(9));
+_f(1) & _f(2) & Initialisation.2,(_f(3) & _f(6) => _f(7));
+_f(1) & _f(2) & Initialisation.1,(_f(3) & _f(4) => _f(5))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+PERSON: FIN(INTEGER) & not(PERSON = {}) & ((1..2)*{STATUS}): FIN(NATURAL*{STATUS}) & not(((1..2)*{STATUS}) = {}) & COURSE: FIN(INTEGER) & not(COURSE = {}) & SUBJECT: FIN(INTEGER) & not(SUBJECT = {}) & Bool: FIN(INTEGER) & not(Bool = {}) & GRADE: FIN(INTEGER) & not(GRADE = {}) & GRADE_SUM: FIN(INTEGER) & not(GRADE_SUM = {}) & GRADE_NUM: FIN(INTEGER) & not(GRADE_NUM = {});
+"Invariant is preserved";
+"Check invariant student : POW( PERSON)";
+{} : POW( PERSON);
+"Check invariant ((((student) /\ (teacher))) = ({}))";
+(((({}) /\ ({}))) = ({}));
+"Check invariant ((course_subject_list) : (((COURSE) <-> (SUBJECT))))";
+(({}) : (((COURSE) <-> (SUBJECT))));
+"Check invariant ((student_list_course) : (((PERSON) <-> (COURSE))))";
+(({}) : (((PERSON) <-> (COURSE))));
+"Check invariant ((test_list) : (((PERSON) <-> (SUBJECT))))";
+(({}) : (((PERSON) <-> (SUBJECT))));
+"Check invariant ((grade_list_student_subject) : ((((PERSON * SUBJECT)) +-> (NATURAL))))";
+(({}) : ((((PERSON * SUBJECT)) +-> (NATURAL))));
+"Check invariant ((student_grade_sum) : (((PERSON) +-> (NATURAL))))";
+(({}) : (((PERSON) +-> (NATURAL))));
+student : POW( PERSON) & teacher : POW( PERSON) & ((((student) /\ (teacher))) = ({})) & ((course_subject_list) : (((COURSE) <-> (SUBJECT)))) & ((student_list_course) : (((PERSON) <-> (COURSE)))) & ((test_list) : (((PERSON) <-> (SUBJECT)))) & ((grade_list_student_subject) : ((((PERSON * SUBJECT)) +-> (NATURAL)))) & ((student_grade_sum) : (((PERSON) +-> (NATURAL)))) & ((student_grade_num) : (((PERSON) +-> (NATURAL))));
+((ss) : (PERSON)) & not(ss : student) & not(ss : teacher);
+((student) \/ ({ss})) : POW( PERSON);
+((((((student) \/ ({ss}))) /\ (teacher))) = ({}));
+((tt) : (PERSON)) & not(tt : student) & not(tt : teacher);
+"Check invariant teacher : POW( PERSON)";
+((teacher) \/ ({tt})) : POW( PERSON);
+((((student) /\ (((teacher) \/ ({tt}))))) = ({}));
+((ss) : (SUBJECT)) & ((cc) : (COURSE)) & not(ss : ran(course_subject_list));
+((((course_subject_list) \/ ({((cc) |-> (ss))}))) : (((COURSE) <-> (SUBJECT))));
+((ss) : (PERSON)) & not(ss : teacher) & ((cc) : (COURSE)) & not(ss : dom(student_list_course)) & ((cc) : (dom(course_subject_list)));
+((((student_list_course) \/ ({((ss) |-> (cc))}))) : (((PERSON) <-> (COURSE))));
+((ss) : (PERSON)) & ((ss) : (dom(student_list_course))) & ((ss2) : (SUBJECT)) & ((ss2) : (ran(((ran((({ss}) <| (student_list_course)))) <| (course_subject_list)))));
+not(ss : dom(student_grade_sum));
+not(ss : dom(student_grade_num));
+not(not(ss : dom(student_grade_sum)) & not(ss : dom(student_grade_num)));
+((((test_list) \/ ({((ss) |-> (ss2))}))) : (((PERSON) <-> (SUBJECT))));
+((((student_grade_sum) \/ ({((ss) |-> (0))}))) : (((PERSON) +-> (NATURAL))));
+"Check invariant ((student_grade_num) : (((PERSON) +-> (NATURAL))))";
+((((student_grade_num) \/ ({((ss) |-> (0))}))) : (((PERSON) +-> (NATURAL))));
+((ss) : (PERSON)) & not(ss : teacher) & ((ss2) : (SUBJECT)) & ((((ss) |-> (ss2))) : (test_list)) & ((gg) : (NAT)) & ((ss) : (dom(student_grade_sum))) & ((ss) : (dom(student_grade_num))) & not(((ss) |-> (ss2)) : dom(grade_list_student_subject));
+((((grade_list_student_subject) <+ ({((((ss) |-> (ss2))) |-> (gg))}))) : ((((PERSON * SUBJECT)) +-> (NATURAL))));
+((((student_grade_sum) <+ ({((ss) |-> (((student_grade_sum )(ss) + gg)))}))) : (((PERSON) +-> (NATURAL))));
+((((student_grade_num) <+ ({((ss) |-> (((student_grade_num )(ss) + 1)))}))) : (((PERSON) +-> (NATURAL))));
+not(grade_list_student_subject = {}) & ((ss) : (PERSON)) & not(ss : teacher) & ((ss) : (dom(test_list))) & ((ss) : (dom(student_grade_sum))) & ((ss) : (dom(student_grade_num))) & (0 +1 <= (student_grade_num )(ss));
+((ss) : (PERSON)) & not(ss : teacher) & ((ss2) : (SUBJECT)) & ((((ss) |-> (ss2))) : (test_list));
+ran((({((ss) |-> (ss2))}) <| (grade_list_student_subject))) : POW( ((5) .. (10)));
+not(ran((({((ss) |-> (ss2))}) <| (grade_list_student_subject))) : POW( ((5) .. (10))));
+PERSON: FIN(INTEGER) & not(PERSON = {});
+((student_grade_sum) : (((PERSON) +-> (NATURAL))));
+((grade_list_student_subject) : ((((PERSON * SUBJECT)) +-> (NATURAL))));
+((test_list) : (((PERSON) <-> (SUBJECT))));
+((student_list_course) : (((PERSON) <-> (COURSE))));
+((course_subject_list) : (((COURSE) <-> (SUBJECT))));
+((((student) /\ (teacher))) = ({}));
+teacher : POW( PERSON);
+student : POW( PERSON);
+not(ss : student);
+((ss) : (PERSON));
+not(tt : student);
+((tt) : (PERSON));
+((cc) : (COURSE));
+((ss) : (SUBJECT));
+not(ss : dom(student_list_course));
+not(ss : teacher);
+((ss2) : (SUBJECT));
+((ss) : (dom(student_list_course)));
+((ss) : (dom(student_grade_num)));
+((ss) : (dom(student_grade_sum)));
+((gg) : (NAT));
+((((ss) |-> (ss2))) : (test_list));
+"Well definedness";
+((student_grade_sum) : (((dom(student_grade_sum)) +-> (ran(student_grade_sum)))));
+((student_grade_num) : (((dom(student_grade_num)) +-> (ran(student_grade_num)))));
+((ss) : (dom(test_list)));
+not(grade_list_student_subject = {});
+not((((student_grade_num )(ss)) = (0)))
+END
+&
+THEORY EnumerateX IS
+STATUS == {Approved,Failed}
+END

@@ -1,0 +1,3365 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="inv">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((student_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:1," typref="103245008" value="student_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((teacher_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:1," typref="103245008" value="teacher_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_i$1) : (((COURSE) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:1," typref="103245008" value="course_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_subject_list_i$1) : ((((COURSE * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:1," typref="1884358727" value="course_subject_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_list_course_i$1) : ((((PERSON * COURSE)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:1," typref="1884358727" value="student_list_course_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:2" typref="3603043417" value="COURSE"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((test_list_i$1) : ((((PERSON * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:1," typref="1884358727" value="test_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_grade_sum_i$1) : ((((PERSON * NATURAL)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:7,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:1," typref="1884358727" value="student_grade_sum_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:2" typref="3603043417" value="NATURAL"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student_i$1)~ )[{1}]) = (student))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:1:1," typref="103245008" value="student_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:2" typref="3603043417" value="student"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((teacher_i$1)~ )[{1}]) = (teacher))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:1:1," typref="103245008" value="teacher_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:2" typref="3603043417" value="teacher"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((course_i$1)~ )[{1}]) = (course))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:1:1," typref="103245008" value="course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:2" typref="3603043417" value="course"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((course_subject_list_i$1)~ )[{1}]) = (course_subject_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:1:1," typref="1884358727" value="course_subject_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:2" typref="103245008" value="course_subject_list"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student_list_course_i$1)~ )[{1}]) = (student_list_course))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:1:1," typref="1884358727" value="student_list_course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:2" typref="103245008" value="student_list_course"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((test_list_i$1)~ )[{1}]) = (test_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:1:1:1," typref="1884358727" value="test_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:2" typref="103245008" value="test_list"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ass"/>
+<Define name="mchcst"/>
+<Define name="aprp">
+<Set>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:1:1:1" typref="917286058" value="PERSON"/>
+</Set>
+<Set>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:1:2:1" typref="515940807" value="STATUS"/>
+<Enumerated_Values>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:1:2:2:1" typref="2246778642" value="Approved"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:1:2:2:2" typref="2246778642" value="Failed"/>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:1:3:1" typref="3467165232" value="COURSE"/>
+</Set>
+<Set>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:1:4:1" typref="432315463" value="SUBJECT"/>
+</Set>
+<Set>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:1:5:1" typref="2989696607" value="Bool"/>
+</Set>
+</Define>
+<Define name="abs">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="student : POW( PERSON)">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:1:1" typref="917286058" value="student"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:1:2" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:" initialTag="teacher : POW( PERSON)">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:2:1" typref="917286058" value="teacher"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:2:2" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student) /\ (teacher))) = ({}))">
+<Binary_Exp op="/\" typref="917286058">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:3:1:1" typref="917286058" value="student"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:3:1:2" typref="917286058" value="teacher"/>
+</Binary_Exp>
+<EmptySet tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:3:2" typref="3817003670"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:" initialTag="course : POW( COURSE)">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:4:1" typref="3467165232" value="course"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:4:2" typref="3467165232" value="COURSE"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_subject_list) : (((COURSE) &lt;-&gt; (SUBJECT))))">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:5:1" typref="1200354851" value="course_subject_list"/>
+<Binary_Exp op="&lt;-&gt;" typref="1229683318">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:5:2:1" typref="3467165232" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:5:2:2" typref="432315463" value="SUBJECT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_list_course) : (((PERSON) &lt;-&gt; (COURSE))))">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:6:1" typref="3963904086" value="student_list_course"/>
+<Binary_Exp op="&lt;-&gt;" typref="3992351917">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:6:2:1" typref="917286058" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:6:2:2" typref="3467165232" value="COURSE"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((test_list) : (((PERSON) &lt;-&gt; (SUBJECT))))">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:7:1" typref="1315527325" value="test_list"/>
+<Binary_Exp op="&lt;-&gt;" typref="3481526908">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:7:2:1" typref="917286058" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:7:2:2" typref="432315463" value="SUBJECT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_grade_sum) : (((PERSON) &lt;-&gt; (NATURAL))))">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:8:1" typref="3435983791" value="student_grade_sum"/>
+<Binary_Exp op="&lt;-&gt;" typref="351536106">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:8:2:1" typref="917286058" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:3:1:8:2:2" typref="3603043417" value="NATURAL"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="imlprp">
+<Exp_Comparison op="=">
+<Id value="PERSON" typref="3603043417"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:2:1:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:2:1:1:2" typref="2701647786" value="20"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="COURSE" typref="3603043417"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:2:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:2:2:1:2" typref="2701647786" value="20"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="SUBJECT" typref="3603043417"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:2:3:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:2:3:1:2" typref="2701647786" value="20"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="Bool" typref="3603043417"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:2:4:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:2:4:1:2" typref="2701647786" value="1"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Define>
+<Define name="imprp"/>
+<Define name="imext"/>
+<Proof_Obligation>
+<Comment>Valuation dans une implantation</Comment>
+<Tag>ValuesLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="imprp"/>
+<Goal>
+<Tag goalTag="Valuation is correct">
+<Quantified_Pred type="#">
+<Variables/>
+<Body>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="PERSON"/>
+</Variables>
+<Values>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:2:1:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:2:1:1:2" typref="2701647786" value="20"/>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="COURSE"/>
+</Variables>
+<Values>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:2:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:2:2:1:2" typref="2701647786" value="20"/>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="SUBJECT"/>
+</Variables>
+<Values>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:2:3:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:2:3:1:2" typref="2701647786" value="20"/>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="Bool"/>
+</Variables>
+<Values>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:2:4:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:2:4:1:2" typref="2701647786" value="1"/>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Nary_Pred op="&amp;">
+<Set>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:1:1:1" typref="917286058" value="PERSON"/>
+</Set>
+<Set>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:1:2:1" typref="515940807" value="STATUS"/>
+<Enumerated_Values>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:1:2:2:1" typref="2246778642" value="Approved"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:1:2:2:2" typref="2246778642" value="Failed"/>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:1:3:1" typref="3467165232" value="COURSE"/>
+</Set>
+<Set>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:1:4:1" typref="432315463" value="SUBJECT"/>
+</Set>
+<Set>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:1:5:1" typref="2989696607" value="Bool"/>
+</Set>
+</Nary_Pred>
+</Sub_Calculus>
+</Body>
+</Quantified_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Initialisation dans une implantation</Comment>
+<Tag>Initialisation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Goal>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:1:1:1," typref="103245008" value="student_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:1:2:1:1" typref="3603043417" value="PERSON"/>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:1:2:1:2:1" typref="2701647786" value="0"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:2:1:1," typref="103245008" value="teacher_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:2:2:1:1" typref="3603043417" value="PERSON"/>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:2:2:1:2:1" typref="2701647786" value="0"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:3:1:1," typref="103245008" value="course_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:3:2:1:1" typref="3603043417" value="COURSE"/>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:3:2:1:2:1" typref="2701647786" value="0"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:4:1:1," typref="1884358727" value="course_subject_list_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="1884358727">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:4:2:1:1:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:4:2:1:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:4:2:1:2:1" typref="2701647786" value="0"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:5:1:1," typref="1884358727" value="student_list_course_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="1884358727">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:5:2:1:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:5:2:1:1:2" typref="3603043417" value="COURSE"/>
+</Binary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:5:2:1:2:1" typref="2701647786" value="0"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:6:1:1," typref="1884358727" value="test_list_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="1884358727">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:6:2:1:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:6:2:1:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:6:2:1:2:1" typref="2701647786" value="0"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:7,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:7:1:1," typref="1884358727" value="student_grade_sum_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="1884358727">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:7:2:1:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:7:2:1:1:2" typref="3603043417" value="NATURAL"/>
+</Binary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:7:2:1:2:1" typref="2701647786" value="0"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:4:1:1:1:1" typref="917286058" value="student"/>
+</Variables>
+<Values>
+<EmptySet tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:4:1:1:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:4:1:2:1:1" typref="917286058" value="teacher"/>
+</Variables>
+<Values>
+<EmptySet tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:4:1:2:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:4:1:3:1:1" typref="3467165232" value="course"/>
+</Variables>
+<Values>
+<EmptySet tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:4:1:3:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:4:1:4:1:1" typref="3963904086" value="student_list_course"/>
+</Variables>
+<Values>
+<EmptySet tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:4:1:4:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:4:1:5:1:1" typref="1200354851" value="course_subject_list"/>
+</Variables>
+<Values>
+<EmptySet tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:4:1:5:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:4:1:6:1:1" typref="1315527325" value="test_list"/>
+</Variables>
+<Values>
+<EmptySet tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:4:1:6:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:4:1:7:1:1" typref="3435983791" value="student_grade_sum"/>
+</Variables>
+<Values>
+<EmptySet tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:4:1:7:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Nary_Sub>
+<Not>
+<Tag goalTag="Refinement is correct">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((student_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:1," typref="103245008" value="student_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((teacher_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:1," typref="103245008" value="teacher_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_i$1) : (((COURSE) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:1," typref="103245008" value="course_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_subject_list_i$1) : ((((COURSE * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:1," typref="1884358727" value="course_subject_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_list_course_i$1) : ((((PERSON * COURSE)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:1," typref="1884358727" value="student_list_course_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:2" typref="3603043417" value="COURSE"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((test_list_i$1) : ((((PERSON * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:1," typref="1884358727" value="test_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_grade_sum_i$1) : ((((PERSON * NATURAL)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:7,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:1," typref="1884358727" value="student_grade_sum_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:2" typref="3603043417" value="NATURAL"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student_i$1)~ )[{1}]) = (student))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:1:1," typref="103245008" value="student_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:2" typref="3603043417" value="student"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((teacher_i$1)~ )[{1}]) = (teacher))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:1:1," typref="103245008" value="teacher_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:2" typref="3603043417" value="teacher"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((course_i$1)~ )[{1}]) = (course))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:1:1," typref="103245008" value="course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:2" typref="3603043417" value="course"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((course_subject_list_i$1)~ )[{1}]) = (course_subject_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:1:1," typref="1884358727" value="course_subject_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:2" typref="103245008" value="course_subject_list"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student_list_course_i$1)~ )[{1}]) = (student_list_course))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:1:1," typref="1884358727" value="student_list_course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:2" typref="103245008" value="student_list_course"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((test_list_i$1)~ )[{1}]) = (test_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:1:1:1," typref="1884358727" value="test_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:2" typref="103245008" value="test_list"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>addStudent</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:1:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:1:2" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:2:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:2:2" typref="917286058" value="student"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:3:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:3:2" typref="917286058" value="teacher"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>addStudent</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables/>
+<Values/>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:1:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:1:2" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:2:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:2:2" typref="917286058" value="student"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:3:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:3:2" typref="917286058" value="teacher"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:1:2:1:1:1:1," typref="103245008" value="student_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:1:2:1:1:1:1," typref="103245008" value="student_i"/>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:1:2:1:1:1:2" typref="2701647786" value="ss"/>
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:1:2:1:2:1" typref="2701647786" value="1"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:3:1:1:1" typref="917286058" value="student"/>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="917286058">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:3:1:2:1:1" typref="917286058" value="student"/>
+<Nary_Exp op="{" typref="917286058">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:3:1:2:1:2:1" typref="555065967" value="ss"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((student_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:1," typref="103245008" value="student_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((teacher_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:1," typref="103245008" value="teacher_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_i$1) : (((COURSE) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:1," typref="103245008" value="course_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_subject_list_i$1) : ((((COURSE * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:1," typref="1884358727" value="course_subject_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_list_course_i$1) : ((((PERSON * COURSE)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:1," typref="1884358727" value="student_list_course_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:2" typref="3603043417" value="COURSE"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((test_list_i$1) : ((((PERSON * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:1," typref="1884358727" value="test_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_grade_sum_i$1) : ((((PERSON * NATURAL)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:7,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:1," typref="1884358727" value="student_grade_sum_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:2" typref="3603043417" value="NATURAL"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student_i$1)~ )[{1}]) = (student))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:1:1," typref="103245008" value="student_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:2" typref="3603043417" value="student"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((teacher_i$1)~ )[{1}]) = (teacher))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:1:1," typref="103245008" value="teacher_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:2" typref="3603043417" value="teacher"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((course_i$1)~ )[{1}]) = (course))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:1:1," typref="103245008" value="course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:2" typref="3603043417" value="course"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((course_subject_list_i$1)~ )[{1}]) = (course_subject_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:1:1," typref="1884358727" value="course_subject_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:2" typref="103245008" value="course_subject_list"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student_list_course_i$1)~ )[{1}]) = (student_list_course))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:1:1," typref="1884358727" value="student_list_course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:2" typref="103245008" value="student_list_course"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((test_list_i$1)~ )[{1}]) = (test_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:1:1:1," typref="1884358727" value="test_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:2" typref="103245008" value="test_list"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>addTeacher</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:2:2:1:1:1" typref="555065967" value="tt"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:2:2:1:1:2" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:2:2:1:2:1" typref="555065967" value="tt"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:2:2:1:2:2" typref="917286058" value="student"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>addTeacher</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables/>
+<Values/>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:2:2:1:1:1" typref="555065967" value="tt"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:2:2:1:1:2" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:2:2:1:2:1" typref="555065967" value="tt"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:2:2:1:2:2" typref="917286058" value="student"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:2:2:1:1:1:1," typref="103245008" value="teacher_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:2:2:1:1:1:1," typref="103245008" value="teacher_i"/>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:2:2:1:1:1:2" typref="2701647786" value="tt"/>
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:2:2:1:2:1" typref="2701647786" value="1"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:2:3:1:1:1" typref="917286058" value="teacher"/>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="917286058">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:2:3:1:2:1:1" typref="917286058" value="teacher"/>
+<Nary_Exp op="{" typref="917286058">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:2:3:1:2:1:2:1" typref="555065967" value="tt"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((student_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:1," typref="103245008" value="student_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((teacher_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:1," typref="103245008" value="teacher_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_i$1) : (((COURSE) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:1," typref="103245008" value="course_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_subject_list_i$1) : ((((COURSE * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:1," typref="1884358727" value="course_subject_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_list_course_i$1) : ((((PERSON * COURSE)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:1," typref="1884358727" value="student_list_course_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:2" typref="3603043417" value="COURSE"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((test_list_i$1) : ((((PERSON * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:1," typref="1884358727" value="test_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_grade_sum_i$1) : ((((PERSON * NATURAL)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:7,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:1," typref="1884358727" value="student_grade_sum_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:2" typref="3603043417" value="NATURAL"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student_i$1)~ )[{1}]) = (student))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:1:1," typref="103245008" value="student_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:2" typref="3603043417" value="student"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((teacher_i$1)~ )[{1}]) = (teacher))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:1:1," typref="103245008" value="teacher_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:2" typref="3603043417" value="teacher"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((course_i$1)~ )[{1}]) = (course))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:1:1," typref="103245008" value="course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:2" typref="3603043417" value="course"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((course_subject_list_i$1)~ )[{1}]) = (course_subject_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:1:1," typref="1884358727" value="course_subject_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:2" typref="103245008" value="course_subject_list"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student_list_course_i$1)~ )[{1}]) = (student_list_course))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:1:1," typref="1884358727" value="student_list_course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:2" typref="103245008" value="student_list_course"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((test_list_i$1)~ )[{1}]) = (test_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:1:1:1," typref="1884358727" value="test_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:2" typref="103245008" value="test_list"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>addCourse</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:3:2:1:1:1" typref="2696969577" value="cc"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:3:2:1:1:2" typref="3467165232" value="COURSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:3:2:1:2:1" typref="2696969577" value="cc"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:3:2:1:2:2" typref="3467165232" value="course"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>addCourse</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables/>
+<Values/>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:3:2:1:1:1" typref="2696969577" value="cc"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:3:2:1:1:2" typref="3467165232" value="COURSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:3:2:1:2:1" typref="2696969577" value="cc"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:3:2:1:2:2" typref="3467165232" value="course"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:3:2:1:1:1:1," typref="103245008" value="course_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:3:2:1:1:1:1," typref="103245008" value="course_i"/>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:3:2:1:1:1:2" typref="2701647786" value="cc"/>
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:3:2:1:2:1" typref="2701647786" value="1"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:3:3:1:1:1" typref="3467165232" value="course"/>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="3467165232">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:3:3:1:2:1:1" typref="3467165232" value="course"/>
+<Nary_Exp op="{" typref="3467165232">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:3:3:1:2:1:2:1" typref="2696969577" value="cc"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((student_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:1," typref="103245008" value="student_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((teacher_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:1," typref="103245008" value="teacher_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_i$1) : (((COURSE) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:1," typref="103245008" value="course_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_subject_list_i$1) : ((((COURSE * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:1," typref="1884358727" value="course_subject_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_list_course_i$1) : ((((PERSON * COURSE)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:1," typref="1884358727" value="student_list_course_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:2" typref="3603043417" value="COURSE"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((test_list_i$1) : ((((PERSON * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:1," typref="1884358727" value="test_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_grade_sum_i$1) : ((((PERSON * NATURAL)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:7,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:1," typref="1884358727" value="student_grade_sum_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:2" typref="3603043417" value="NATURAL"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student_i$1)~ )[{1}]) = (student))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:1:1," typref="103245008" value="student_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:2" typref="3603043417" value="student"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((teacher_i$1)~ )[{1}]) = (teacher))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:1:1," typref="103245008" value="teacher_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:2" typref="3603043417" value="teacher"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((course_i$1)~ )[{1}]) = (course))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:1:1," typref="103245008" value="course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:2" typref="3603043417" value="course"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((course_subject_list_i$1)~ )[{1}]) = (course_subject_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:1:1," typref="1884358727" value="course_subject_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:2" typref="103245008" value="course_subject_list"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student_list_course_i$1)~ )[{1}]) = (student_list_course))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:1:1," typref="1884358727" value="student_list_course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:2" typref="103245008" value="student_list_course"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((test_list_i$1)~ )[{1}]) = (test_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:1:1:1," typref="1884358727" value="test_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:2" typref="103245008" value="test_list"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>addSubjectToCourse</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:1:1" typref="3029594684" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:1:2" typref="432315463" value="SUBJECT"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:2:1" typref="2696969577" value="cc"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:2:2" typref="3467165232" value="COURSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:3:1" typref="3029594684" value="ss"/>
+<Unary_Exp op="ran" typref="432315463">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:3:2:1" typref="1200354851" value="course_subject_list"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>addSubjectToCourse</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables/>
+<Values/>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:1:1" typref="3029594684" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:1:2" typref="432315463" value="SUBJECT"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:2:1" typref="2696969577" value="cc"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:2:2" typref="3467165232" value="COURSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:3:1" typref="3029594684" value="ss"/>
+<Unary_Exp op="ran" typref="432315463">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:3:2:1" typref="1200354851" value="course_subject_list"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:4:2:1:1:1:1," typref="1884358727" value="course_subject_list_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:4:2:1:1:1:1," typref="1884358727" value="course_subject_list_i"/>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Binary_Exp op="|-&gt;">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:4:2:1:1:1:2:1" typref="2701647786" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:4:2:1:1:1:2:2" typref="2701647786" value="cc"/>
+</Binary_Exp>
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:4:2:1:2:1" typref="2701647786" value="1"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:3:1:1:1" typref="1200354851" value="course_subject_list"/>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="1200354851">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:3:1:2:1:1" typref="1200354851" value="course_subject_list"/>
+<Nary_Exp op="{" typref="1200354851">
+<Binary_Exp op="|-&gt;" typref="1691190710">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:3:1:2:1:2:1:1" typref="2696969577" value="cc"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:3:1:2:1:2:1:2" typref="3029594684" value="ss"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((student_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:1," typref="103245008" value="student_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((teacher_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:1," typref="103245008" value="teacher_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_i$1) : (((COURSE) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:1," typref="103245008" value="course_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_subject_list_i$1) : ((((COURSE * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:1," typref="1884358727" value="course_subject_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_list_course_i$1) : ((((PERSON * COURSE)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:1," typref="1884358727" value="student_list_course_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:2" typref="3603043417" value="COURSE"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((test_list_i$1) : ((((PERSON * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:1," typref="1884358727" value="test_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_grade_sum_i$1) : ((((PERSON * NATURAL)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:7,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:1," typref="1884358727" value="student_grade_sum_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:2" typref="3603043417" value="NATURAL"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student_i$1)~ )[{1}]) = (student))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:1:1," typref="103245008" value="student_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:2" typref="3603043417" value="student"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((teacher_i$1)~ )[{1}]) = (teacher))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:1:1," typref="103245008" value="teacher_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:2" typref="3603043417" value="teacher"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((course_i$1)~ )[{1}]) = (course))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:1:1," typref="103245008" value="course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:2" typref="3603043417" value="course"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((course_subject_list_i$1)~ )[{1}]) = (course_subject_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:1:1," typref="1884358727" value="course_subject_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:2" typref="103245008" value="course_subject_list"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student_list_course_i$1)~ )[{1}]) = (student_list_course))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:1:1," typref="1884358727" value="student_list_course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:2" typref="103245008" value="student_list_course"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((test_list_i$1)~ )[{1}]) = (test_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:1:1:1," typref="1884358727" value="test_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:2" typref="103245008" value="test_list"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>registerStudent</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:1:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:1:2" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:2:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:2:2" typref="917286058" value="teacher"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:3:1" typref="2696969577" value="cc"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:3:2" typref="3467165232" value="COURSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:4:1" typref="555065967" value="ss"/>
+<Unary_Exp op="dom" typref="917286058">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:4:2:1" typref="3963904086" value="student_list_course"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:5:1" typref="2696969577" value="cc"/>
+<Unary_Exp op="dom" typref="3467165232">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:5:2:1" typref="1200354851" value="course_subject_list"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>registerStudent</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables/>
+<Values/>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:1:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:1:2" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:2:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:2:2" typref="917286058" value="teacher"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:3:1" typref="2696969577" value="cc"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:3:2" typref="3467165232" value="COURSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:4:1" typref="555065967" value="ss"/>
+<Unary_Exp op="dom" typref="917286058">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:4:2:1" typref="3963904086" value="student_list_course"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:5:1" typref="2696969577" value="cc"/>
+<Unary_Exp op="dom" typref="3467165232">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:5:2:1" typref="1200354851" value="course_subject_list"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:5:2:1:1:1:1," typref="1884358727" value="student_list_course_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:5:2:1:1:1:1," typref="1884358727" value="student_list_course_i"/>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Binary_Exp op="|-&gt;">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:5:2:1:1:1:2:1" typref="2701647786" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:5:2:1:1:1:2:2" typref="2701647786" value="cc"/>
+</Binary_Exp>
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:5:2:1:2:1" typref="2701647786" value="1"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:3:1:1:1" typref="3963904086" value="student_list_course"/>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="3963904086">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:3:1:2:1:1" typref="3963904086" value="student_list_course"/>
+<Nary_Exp op="{" typref="3963904086">
+<Binary_Exp op="|-&gt;" typref="3247575533">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:3:1:2:1:2:1:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:3:1:2:1:2:1:2" typref="2696969577" value="cc"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((student_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:1," typref="103245008" value="student_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((teacher_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:1," typref="103245008" value="teacher_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_i$1) : (((COURSE) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:1," typref="103245008" value="course_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_subject_list_i$1) : ((((COURSE * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:1," typref="1884358727" value="course_subject_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_list_course_i$1) : ((((PERSON * COURSE)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:1," typref="1884358727" value="student_list_course_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:2" typref="3603043417" value="COURSE"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((test_list_i$1) : ((((PERSON * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:1," typref="1884358727" value="test_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_grade_sum_i$1) : ((((PERSON * NATURAL)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:7,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:1," typref="1884358727" value="student_grade_sum_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:2" typref="3603043417" value="NATURAL"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student_i$1)~ )[{1}]) = (student))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:1:1," typref="103245008" value="student_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:2" typref="3603043417" value="student"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((teacher_i$1)~ )[{1}]) = (teacher))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:1:1," typref="103245008" value="teacher_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:2" typref="3603043417" value="teacher"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((course_i$1)~ )[{1}]) = (course))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:1:1," typref="103245008" value="course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:2" typref="3603043417" value="course"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((course_subject_list_i$1)~ )[{1}]) = (course_subject_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:1:1," typref="1884358727" value="course_subject_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:2" typref="103245008" value="course_subject_list"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student_list_course_i$1)~ )[{1}]) = (student_list_course))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:1:1," typref="1884358727" value="student_list_course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:2" typref="103245008" value="student_list_course"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((test_list_i$1)~ )[{1}]) = (test_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:1:1:1," typref="1884358727" value="test_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:2" typref="103245008" value="test_list"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>doTest</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:1:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:1:2" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:2:1" typref="555065967" value="ss"/>
+<Unary_Exp op="dom" typref="917286058">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:2:2:1" typref="3963904086" value="student_list_course"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:3:1" typref="3029594684" value="ss2"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:3:2" typref="432315463" value="SUBJECT"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:4:1" typref="3029594684" value="ss2"/>
+<Unary_Exp op="ran" typref="432315463">
+<Binary_Exp op="&lt;|" typref="1200354851">
+<Unary_Exp op="ran" typref="3467165232">
+<Binary_Exp op="&lt;|" typref="3963904086">
+<Nary_Exp op="{" typref="917286058">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:4:2:1:1:1:1:1" typref="555065967" value="ss"/>
+</Nary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:4:2:1:1:1:2" typref="3963904086" value="student_list_course"/>
+</Binary_Exp>
+</Unary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:4:2:1:2" typref="1200354851" value="course_subject_list"/>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>doTest</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables/>
+<Values/>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:1:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:1:2" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:2:1" typref="555065967" value="ss"/>
+<Unary_Exp op="dom" typref="917286058">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:2:2:1" typref="3963904086" value="student_list_course"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:3:1" typref="3029594684" value="ss2"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:3:2" typref="432315463" value="SUBJECT"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:4:1" typref="3029594684" value="ss2"/>
+<Unary_Exp op="ran" typref="432315463">
+<Binary_Exp op="&lt;|" typref="1200354851">
+<Unary_Exp op="ran" typref="3467165232">
+<Binary_Exp op="&lt;|" typref="3963904086">
+<Nary_Exp op="{" typref="917286058">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:4:2:1:1:1:1:1" typref="555065967" value="ss"/>
+</Nary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:4:2:1:1:1:2" typref="3963904086" value="student_list_course"/>
+</Binary_Exp>
+</Unary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:4:2:1:2" typref="1200354851" value="course_subject_list"/>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:6:2:1:1:1:1," typref="1884358727" value="test_list_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:6:2:1:1:1:1," typref="1884358727" value="test_list_i"/>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Binary_Exp op="|-&gt;">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:6:2:1:1:1:2:1" typref="2701647786" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:6:2:1:1:1:2:2" typref="2701647786" value="ss2"/>
+</Binary_Exp>
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:6:6:2:1:2:1" typref="2701647786" value="1"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<If_Sub elseif="no">
+<Condition>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:3:1:1:1:1" typref="555065967" value="ss"/>
+<Unary_Exp op="dom" typref="917286058">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:3:1:1:1:2:1" typref="3435983791" value="student_grade_sum"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:3:1:2:1:1:1:1" typref="3435983791" value="student_grade_sum"/>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="3435983791">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:3:1:2:1:1:2:1:1" typref="3435983791" value="student_grade_sum"/>
+<Nary_Exp op="{" typref="3435983791">
+<Binary_Exp op="|-&gt;" typref="1222394154">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:3:1:2:1:1:2:1:2:1:1" typref="555065967" value="ss"/>
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:3:1:2:1:1:2:1:2:1:2" typref="2701647786" value="0"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:3:1:2:1:2:1:1" typref="1315527325" value="test_list"/>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="1315527325">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:3:1:2:1:2:2:1:1" typref="1315527325" value="test_list"/>
+<Nary_Exp op="{" typref="1315527325">
+<Binary_Exp op="|-&gt;" typref="1315550396">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:3:1:2:1:2:2:1:2:1:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:3:1:2:1:2:2:1:2:1:2" typref="3029594684" value="ss2"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Then>
+<Else>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:3:1:3:1:1:1" typref="1315527325" value="test_list"/>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="1315527325">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:3:1:3:1:2:1:1" typref="1315527325" value="test_list"/>
+<Nary_Exp op="{" typref="1315527325">
+<Binary_Exp op="|-&gt;" typref="1315550396">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:3:1:3:1:2:1:2:1:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:3:1:3:1:2:1:2:1:2" typref="3029594684" value="ss2"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Else>
+</If_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((student_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:1," typref="103245008" value="student_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((teacher_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:1," typref="103245008" value="teacher_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_i$1) : (((COURSE) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:1," typref="103245008" value="course_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((course_subject_list_i$1) : ((((COURSE * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:1," typref="1884358727" value="course_subject_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_list_course_i$1) : ((((PERSON * COURSE)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:1," typref="1884358727" value="student_list_course_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:2" typref="3603043417" value="COURSE"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((test_list_i$1) : ((((PERSON * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:1," typref="1884358727" value="test_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((student_grade_sum_i$1) : ((((PERSON * NATURAL)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:7,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:1," typref="1884358727" value="student_grade_sum_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:2" typref="3603043417" value="NATURAL"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student_i$1)~ )[{1}]) = (student))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:1:1," typref="103245008" value="student_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:2" typref="3603043417" value="student"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((teacher_i$1)~ )[{1}]) = (teacher))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:1:1," typref="103245008" value="teacher_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:2" typref="3603043417" value="teacher"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((course_i$1)~ )[{1}]) = (course))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:1:1," typref="103245008" value="course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:2" typref="3603043417" value="course"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((course_subject_list_i$1)~ )[{1}]) = (course_subject_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:1:1," typref="1884358727" value="course_subject_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:2" typref="103245008" value="course_subject_list"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((student_list_course_i$1)~ )[{1}]) = (student_list_course))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:1:1," typref="1884358727" value="student_list_course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:2" typref="103245008" value="student_list_course"/>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((((test_list_i$1)~ )[{1}]) = (test_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:1:1:1," typref="1884358727" value="test_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:13:2" typref="103245008" value="test_list"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imprp"/>
+<Hypothesis/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":" initialTag="((student_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:1," typref="103245008" value="student_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:1:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":" initialTag="((teacher_i$1) : (((PERSON) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:1," typref="103245008" value="teacher_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:2:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":" initialTag="((course_i$1) : (((COURSE) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:1," typref="103245008" value="course_i"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:3:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":" initialTag="((course_subject_list_i$1) : ((((COURSE * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:1," typref="1884358727" value="course_subject_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:4:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":" initialTag="((student_list_course_i$1) : ((((PERSON * COURSE)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:1," typref="1884358727" value="student_list_course_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:1:2" typref="3603043417" value="COURSE"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:5:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":" initialTag="((test_list_i$1) : ((((PERSON * SUBJECT)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:1," typref="1884358727" value="test_list_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:6:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":" initialTag="((student_grade_sum_i$1) : ((((PERSON * NATURAL)) --&gt; (Bool))))">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:7,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:1," typref="1884358727" value="student_grade_sum_i"/>
+<Binary_Exp op="--&gt;" typref="2134698876">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:1:2" typref="3603043417" value="NATURAL"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:7:2:2" typref="3603043417" value="Bool"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="=" initialTag="((((student_i$1)~ )[{1}]) = (student))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:1:1," typref="103245008" value="student_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:8:2" typref="3603043417" value="student"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="=" initialTag="((((teacher_i$1)~ )[{1}]) = (teacher))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:1:1," typref="103245008" value="teacher_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:9:2" typref="3603043417" value="teacher"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="=" initialTag="((((course_i$1)~ )[{1}]) = (course))">
+<Binary_Exp op="[" typref="3603043417">
+<Unary_Exp op="~" typref="103245008">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:1:1," typref="103245008" value="course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:10:2" typref="3603043417" value="course"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="=" initialTag="((((course_subject_list_i$1)~ )[{1}]) = (course_subject_list))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:1:1," typref="1884358727" value="course_subject_list_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:11:2" typref="103245008" value="course_subject_list"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="=" initialTag="((((student_list_course_i$1)~ )[{1}]) = (student_list_course))">
+<Binary_Exp op="[" typref="103245008">
+<Unary_Exp op="~" typref="1905100487">
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:1:1," typref="1884358727" value="student_list_course_i"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:1:2:1" typref="2701647786" value="1"/>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:4:1:12:2" typref="103245008" value="student_list_course"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessAssertions</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:1,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:1:1:1," typref="103245008" value="student_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:1:2:1:1" typref="3603043417" value="PERSON"/>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:1:2:1:2:1" typref="2701647786" value="0"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:2,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:2:1:1," typref="103245008" value="teacher_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:2:2:1:1" typref="3603043417" value="PERSON"/>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:2:2:1:2:1" typref="2701647786" value="0"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:3,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:3:1:1," typref="103245008" value="course_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:3:2:1:1" typref="3603043417" value="COURSE"/>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:3:2:1:2:1" typref="2701647786" value="0"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:5,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:4:1:1," typref="1884358727" value="course_subject_list_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="1884358727">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:4:2:1:1:1" typref="3603043417" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:4:2:1:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:4:2:1:2:1" typref="2701647786" value="0"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:4,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:5:1:1," typref="1884358727" value="student_list_course_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="1884358727">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:5:2:1:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:5:2:1:1:2" typref="3603043417" value="COURSE"/>
+</Binary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:5:2:1:2:1" typref="2701647786" value="0"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:3:6,/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:6:1:1," typref="1884358727" value="test_list_i"/>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="1884358727">
+<Binary_Exp op="*" typref="103245008">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:6:2:1:1:1" typref="3603043417" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:6:2:1:1:2" typref="3603043417" value="SUBJECT"/>
+</Binary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:5:1:6:2:1:2:1" typref="2701647786" value="0"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_addStudent</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:1:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:1:2" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:2:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:2:2" typref="917286058" value="student"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:3:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:1:2:1:3:2" typref="917286058" value="teacher"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_addTeacher</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:2:2:1:1:1" typref="555065967" value="tt"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:2:2:1:1:2" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:2:2:1:2:1" typref="555065967" value="tt"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:2:2:1:2:2" typref="917286058" value="student"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_addCourse</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:3:2:1:1:1" typref="2696969577" value="cc"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:3:2:1:1:2" typref="3467165232" value="COURSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:3:2:1:2:1" typref="2696969577" value="cc"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:3:2:1:2:2" typref="3467165232" value="course"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_addSubjectToCourse</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:1:1" typref="3029594684" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:1:2" typref="432315463" value="SUBJECT"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:2:1" typref="2696969577" value="cc"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:2:2" typref="3467165232" value="COURSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:3:1" typref="3029594684" value="ss"/>
+<Unary_Exp op="ran" typref="432315463">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:4:2:1:3:2:1" typref="1200354851" value="course_subject_list"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_registerStudent</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:1:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:1:2" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:2:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:2:2" typref="917286058" value="teacher"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:3:1" typref="2696969577" value="cc"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:3:2" typref="3467165232" value="COURSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:4:1" typref="555065967" value="ss"/>
+<Unary_Exp op="dom" typref="917286058">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:4:2:1" typref="3963904086" value="student_list_course"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:5:1" typref="2696969577" value="cc"/>
+<Unary_Exp op="dom" typref="3467165232">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:5:2:1:5:2:1" typref="1200354851" value="course_subject_list"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_doTest</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:1:1" typref="555065967" value="ss"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:1:2" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:2:1" typref="555065967" value="ss"/>
+<Unary_Exp op="dom" typref="917286058">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:2:2:1" typref="3963904086" value="student_list_course"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:3:1" typref="3029594684" value="ss2"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:3:2" typref="432315463" value="SUBJECT"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:4:1" typref="3029594684" value="ss2"/>
+<Unary_Exp op="ran" typref="432315463">
+<Binary_Exp op="&lt;|" typref="1200354851">
+<Unary_Exp op="ran" typref="3467165232">
+<Binary_Exp op="&lt;|" typref="3963904086">
+<Nary_Exp op="{" typref="917286058">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:4:2:1:1:1:1:1" typref="555065967" value="ss"/>
+</Nary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:4:2:1:1:1:2" typref="3963904086" value="student_list_course"/>
+</Binary_Exp>
+</Unary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:5:6:2:1:4:2:1:2" typref="1200354851" value="course_subject_list"/>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:7:1:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="2701647786">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:7:2:1" value="INTEGER"/>
+</Type>
+<Type id="103245008">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:7:3:1:1:1" value="INTEGER"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:7:3:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1884358727">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:7:4:1:1:1:1" value="INTEGER"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:7:4:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:7:4:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3083833907">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:7:5:1:1:1:1" value="INTEGER"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:7:5:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2134698876">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:7:6:1:1:1:1:1" value="INTEGER"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:7:6:1:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:7:6:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1905100487">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:7:7:1:1:1" value="INTEGER"/>
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:7:7:1:1:2:1" value="INTEGER"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico_i.bxml:1:7:7:1:1:2:2" value="INTEGER"/>
+</Binary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="917286058">
+<Unary_Exp op="POW">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:1:1:1" value="PERSON"/>
+</Unary_Exp>
+</Type>
+<Type id="515940807">
+<Unary_Exp op="POW">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:2:1:1" value="STATUS"/>
+</Unary_Exp>
+</Type>
+<Type id="2246778642">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:3:1" value="STATUS"/>
+</Type>
+<Type id="3467165232">
+<Unary_Exp op="POW">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:4:1:1" value="COURSE"/>
+</Unary_Exp>
+</Type>
+<Type id="432315463">
+<Unary_Exp op="POW">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:5:1:1" value="SUBJECT"/>
+</Unary_Exp>
+</Type>
+<Type id="2989696607">
+<Unary_Exp op="POW">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:6:1:1" value="Bool"/>
+</Unary_Exp>
+</Type>
+<Type id="3963904086">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:7:1:1:1" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:7:1:1:2" value="COURSE"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1200354851">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:8:1:1:1" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:8:1:1:2" value="SUBJECT"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1315527325">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:9:1:1:1" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:9:1:1:2" value="SUBJECT"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3435983791">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:10:1:1:1" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:10:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:11:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="1229683318">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:12:1:1:1:1" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:12:1:1:1:2" value="SUBJECT"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3992351917">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:13:1:1:1:1" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:13:1:1:1:2" value="COURSE"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3481526908">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:14:1:1:1:1" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:14:1:1:1:2" value="SUBJECT"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="351536106">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:15:1:1:1:1" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:15:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:16:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="555065967">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:17:1" value="PERSON"/>
+</Type>
+<Type id="2696969577">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:18:1" value="COURSE"/>
+</Type>
+<Type id="3029594684">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:19:1" value="SUBJECT"/>
+</Type>
+<Type id="1691190710">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:20:1:1" value="COURSE"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:20:1:2" value="SUBJECT"/>
+</Binary_Exp>
+</Type>
+<Type id="3247575533">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:21:1:1" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:21:1:2" value="COURSE"/>
+</Binary_Exp>
+</Type>
+<Type id="1222394154">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:22:1:1" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:22:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Type>
+<Type id="2701647786">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:23:1" value="INTEGER"/>
+</Type>
+<Type id="1315550396">
+<Binary_Exp op="*">
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:24:1:1" value="PERSON"/>
+<Id tag="/Users/fredazevedo/Desktop/ProjetoFinal/bdp/Academico.bxml:1:6:24:1:2" value="SUBJECT"/>
+</Binary_Exp>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

@@ -1,0 +1,910 @@
+<Machine name='Academico' type='abstraction'>
+<Sets>
+<Set>
+<Id value='PERSON' typref='917286058'/>
+</Set>
+<Set>
+<Id value='STATUS' typref='515940807'/>
+<Enumerated_Values>
+<Id value='Approved' typref='2246778642'/>
+<Id value='Failed' typref='2246778642'/>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value='COURSE' typref='3467165232'/>
+</Set>
+<Set>
+<Id value='SUBJECT' typref='432315463'/>
+</Set>
+<Set>
+<Id value='Bool' typref='2989696607'/>
+</Set>
+<Set>
+<Id value='GRADE' typref='2248242994'/>
+</Set>
+<Set>
+<Id value='GRADE_SUM' typref='3481042974'/>
+</Set>
+<Set>
+<Id value='GRADE_NUM' typref='3437676185'/>
+</Set>
+</Sets>
+<Abstract_Variables>
+<Id value='student' typref='917286058'/>
+<Id value='teacher' typref='917286058'/>
+<Id value='student_list_course' typref='3963904086'/>
+<Id value='course_subject_list' typref='1200354851'/>
+<Id value='test_list' typref='1315527325'/>
+<Id value='student_grade_sum' typref='3435983791'/>
+<Id value='grade_list_student_subject' typref='3540047010'/>
+<Id value='student_grade_num' typref='3435983791'/>
+</Abstract_Variables>
+<Invariant>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='&lt;:'>
+<Id value='student' typref='917286058'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;:'>
+<Id value='teacher' typref='917286058'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Binary_Exp op='/\' typref='917286058'>
+<Id value='student' typref='917286058'/>
+<Id value='teacher' typref='917286058'/>
+</Binary_Exp>
+<EmptySet typref='3817003670'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='course_subject_list' typref='1200354851'/>
+<Binary_Exp op='&lt;-&gt;' typref='1229683318'>
+<Id value='COURSE' typref='3467165232'/>
+<Id value='SUBJECT' typref='432315463'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='student_list_course' typref='3963904086'/>
+<Binary_Exp op='&lt;-&gt;' typref='3992351917'>
+<Id value='PERSON' typref='917286058'/>
+<Id value='COURSE' typref='3467165232'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='test_list' typref='1315527325'/>
+<Binary_Exp op='&lt;-&gt;' typref='3481526908'>
+<Id value='PERSON' typref='917286058'/>
+<Id value='SUBJECT' typref='432315463'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='grade_list_student_subject' typref='3540047010'/>
+<Binary_Exp op='+-&gt;' typref='2177777335'>
+<Binary_Exp op='*' typref='1315527325'>
+<Id value='PERSON' typref='917286058'/>
+<Id value='SUBJECT' typref='432315463'/>
+</Binary_Exp>
+<Id value='NATURAL' typref='3603043417'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='student_grade_sum' typref='3435983791'/>
+<Binary_Exp op='+-&gt;' typref='351536106'>
+<Id value='PERSON' typref='917286058'/>
+<Id value='NATURAL' typref='3603043417'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='student_grade_num' typref='3435983791'/>
+<Binary_Exp op='+-&gt;' typref='351536106'>
+<Id value='PERSON' typref='917286058'/>
+<Id value='NATURAL' typref='3603043417'/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Variables>
+<Id value='student' typref='917286058'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='teacher' typref='917286058'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='student_list_course' typref='3963904086'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='course_subject_list' typref='1200354851'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='test_list' typref='1315527325'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='student_grade_sum' typref='3435983791'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='student_grade_num' typref='3435983791'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='grade_list_student_subject' typref='3540047010'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<Operations>
+<Operation name='addStudent'>
+<Input_Parameters>
+<Id value='ss' typref='555065967'/>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='ss' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Id value='ss' typref='555065967'/>
+<Id value='student' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Id value='ss' typref='555065967'/>
+<Id value='teacher' typref='917286058'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Id value='student' typref='917286058'/>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='917286058'>
+<Id value='student' typref='917286058'/>
+<Nary_Exp op='{' typref='917286058'>
+<Id value='ss' typref='555065967'/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='addTeacher'>
+<Input_Parameters>
+<Id value='tt' typref='555065967'/>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='tt' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Id value='tt' typref='555065967'/>
+<Id value='student' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Id value='tt' typref='555065967'/>
+<Id value='teacher' typref='917286058'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Id value='teacher' typref='917286058'/>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='917286058'>
+<Id value='teacher' typref='917286058'/>
+<Nary_Exp op='{' typref='917286058'>
+<Id value='tt' typref='555065967'/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='addSubjectToCourse'>
+<Input_Parameters>
+<Id value='ss' typref='3029594684'/>
+<Id value='cc' typref='2696969577'/>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='ss' typref='3029594684'/>
+<Id value='SUBJECT' typref='432315463'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='cc' typref='2696969577'/>
+<Id value='COURSE' typref='3467165232'/>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Id value='ss' typref='3029594684'/>
+<Unary_Exp op='ran' typref='432315463'>
+<Id value='course_subject_list' typref='1200354851'/>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Id value='course_subject_list' typref='1200354851'/>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='1200354851'>
+<Id value='course_subject_list' typref='1200354851'/>
+<Nary_Exp op='{' typref='1200354851'>
+<Binary_Exp op='|-&gt;' typref='1691190710'>
+<Id value='cc' typref='2696969577'/>
+<Id value='ss' typref='3029594684'/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='registerStudent'>
+<Input_Parameters>
+<Id value='ss' typref='555065967'/>
+<Id value='cc' typref='2696969577'/>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='ss' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Id value='ss' typref='555065967'/>
+<Id value='teacher' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='cc' typref='2696969577'/>
+<Id value='COURSE' typref='3467165232'/>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Id value='ss' typref='555065967'/>
+<Unary_Exp op='dom' typref='917286058'>
+<Id value='student_list_course' typref='3963904086'/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='cc' typref='2696969577'/>
+<Unary_Exp op='dom' typref='3467165232'>
+<Id value='course_subject_list' typref='1200354851'/>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Id value='student_list_course' typref='3963904086'/>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='3963904086'>
+<Id value='student_list_course' typref='3963904086'/>
+<Nary_Exp op='{' typref='3963904086'>
+<Binary_Exp op='|-&gt;' typref='3247575533'>
+<Id value='ss' typref='555065967'/>
+<Id value='cc' typref='2696969577'/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='doTest'>
+<Input_Parameters>
+<Id value='ss' typref='555065967'/>
+<Id value='ss2' typref='3029594684'/>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='ss' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='ss' typref='555065967'/>
+<Unary_Exp op='dom' typref='917286058'>
+<Id value='student_list_course' typref='3963904086'/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='ss2' typref='3029594684'/>
+<Id value='SUBJECT' typref='432315463'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='ss2' typref='3029594684'/>
+<Unary_Exp op='ran' typref='432315463'>
+<Binary_Exp op='&lt;|' typref='1200354851'>
+<Unary_Exp op='ran' typref='3467165232'>
+<Binary_Exp op='&lt;|' typref='3963904086'>
+<Nary_Exp op='{' typref='917286058'>
+<Id value='ss' typref='555065967'/>
+</Nary_Exp>
+<Id value='student_list_course' typref='3963904086'/>
+</Binary_Exp>
+</Unary_Exp>
+<Id value='course_subject_list' typref='1200354851'/>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<If_Sub elseif='no'>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='/:'>
+<Id value='ss' typref='555065967'/>
+<Unary_Exp op='dom' typref='917286058'>
+<Id value='student_grade_sum' typref='3435983791'/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Id value='ss' typref='555065967'/>
+<Unary_Exp op='dom' typref='917286058'>
+<Id value='student_grade_num' typref='3435983791'/>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Variables>
+<Id value='student_grade_sum' typref='3435983791'/>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='3435983791'>
+<Id value='student_grade_sum' typref='3435983791'/>
+<Nary_Exp op='{' typref='3435983791'>
+<Binary_Exp op='|-&gt;' typref='1222394154'>
+<Id value='ss' typref='555065967'/>
+<Integer_Literal value='0' typref='2701647786'/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='student_grade_num' typref='3435983791'/>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='3435983791'>
+<Id value='student_grade_num' typref='3435983791'/>
+<Nary_Exp op='{' typref='3435983791'>
+<Binary_Exp op='|-&gt;' typref='1222394154'>
+<Id value='ss' typref='555065967'/>
+<Integer_Literal value='0' typref='2701647786'/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='test_list' typref='1315527325'/>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='1315527325'>
+<Id value='test_list' typref='1315527325'/>
+<Nary_Exp op='{' typref='1315527325'>
+<Binary_Exp op='|-&gt;' typref='1315550396'>
+<Id value='ss' typref='555065967'/>
+<Id value='ss2' typref='3029594684'/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Then>
+<Else>
+<Assignement_Sub>
+<Variables>
+<Id value='test_list' typref='1315527325'/>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='1315527325'>
+<Id value='test_list' typref='1315527325'/>
+<Nary_Exp op='{' typref='1315527325'>
+<Binary_Exp op='|-&gt;' typref='1315550396'>
+<Id value='ss' typref='555065967'/>
+<Id value='ss2' typref='3029594684'/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Else>
+</If_Sub>
+</Body>
+</Operation>
+<Operation name='registerGrade'>
+<Input_Parameters>
+<Id value='ss' typref='555065967'/>
+<Id value='ss2' typref='3029594684'/>
+<Id value='gg' typref='2701647786'/>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='ss' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Id value='ss' typref='555065967'/>
+<Id value='teacher' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='ss2' typref='3029594684'/>
+<Id value='SUBJECT' typref='432315463'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Binary_Exp op='|-&gt;' typref='1315550396'>
+<Id value='ss' typref='555065967'/>
+<Id value='ss2' typref='3029594684'/>
+</Binary_Exp>
+<Id value='test_list' typref='1315527325'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='gg' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='ss' typref='555065967'/>
+<Unary_Exp op='dom' typref='917286058'>
+<Id value='student_grade_sum' typref='3435983791'/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='ss' typref='555065967'/>
+<Unary_Exp op='dom' typref='917286058'>
+<Id value='student_grade_num' typref='3435983791'/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Binary_Exp op='|-&gt;' typref='1315550396'>
+<Id value='ss' typref='555065967'/>
+<Id value='ss2' typref='3029594684'/>
+</Binary_Exp>
+<Unary_Exp op='dom' typref='1315527325'>
+<Id value='grade_list_student_subject' typref='3540047010'/>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Variables>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='grade_list_student_subject' typref='3540047010'/>
+<Binary_Exp op='|-&gt;'>
+<Id value='ss' typref='555065967'/>
+<Id value='ss2' typref='3029594684'/>
+</Binary_Exp>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='gg' typref='2701647786'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='student_grade_sum' typref='3435983791'/>
+<Id value='ss' typref='555065967'/>
+</Binary_Exp>
+</Variables>
+<Values>
+<Binary_Exp op='+' typref='2701647786'>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='student_grade_sum' typref='3435983791'/>
+<Id value='ss' typref='555065967'/>
+</Binary_Exp>
+<Id value='gg' typref='2701647786'/>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='student_grade_num' typref='3435983791'/>
+<Id value='ss' typref='555065967'/>
+</Binary_Exp>
+</Variables>
+<Values>
+<Binary_Exp op='+' typref='2701647786'>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='student_grade_num' typref='3435983791'/>
+<Id value='ss' typref='555065967'/>
+</Binary_Exp>
+<Integer_Literal value='1' typref='2701647786'/>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='getIRA'>
+<Output_Parameters>
+<Id value='ira' typref='2701647786'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='ss' typref='555065967'/>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='/='>
+<Id value='grade_list_student_subject' typref='3540047010'/>
+<EmptySet typref='3540047010'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='ss' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Id value='ss' typref='555065967'/>
+<Id value='teacher' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='ss' typref='555065967'/>
+<Unary_Exp op='dom' typref='917286058'>
+<Id value='test_list' typref='1315527325'/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='ss' typref='555065967'/>
+<Unary_Exp op='dom' typref='917286058'>
+<Id value='student_grade_sum' typref='3435983791'/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='ss' typref='555065967'/>
+<Unary_Exp op='dom' typref='917286058'>
+<Id value='student_grade_num' typref='3435983791'/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='&gt;'>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='student_grade_num' typref='3435983791'/>
+<Id value='ss' typref='555065967'/>
+</Binary_Exp>
+<Integer_Literal value='0' typref='2701647786'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Id value='ira' typref='2701647786'/>
+</Variables>
+<Values>
+<Binary_Exp op='/' typref='2701647786'>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='student_grade_sum' typref='3435983791'/>
+<Id value='ss' typref='555065967'/>
+</Binary_Exp>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='student_grade_num' typref='3435983791'/>
+<Id value='ss' typref='555065967'/>
+</Binary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='isApproved'>
+<Output_Parameters>
+<Id value='status' typref='2246778642'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='ss' typref='555065967'/>
+<Id value='ss2' typref='3029594684'/>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='ss' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Id value='ss' typref='555065967'/>
+<Id value='teacher' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='ss2' typref='3029594684'/>
+<Id value='SUBJECT' typref='432315463'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Binary_Exp op='|-&gt;'>
+<Id value='ss' typref='555065967'/>
+<Id value='ss2' typref='3029594684'/>
+</Binary_Exp>
+<Id value='test_list' typref='1315527325'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='&lt;:'>
+<Unary_Exp op='ran' typref='3603043417'>
+<Binary_Exp op='&lt;|' typref='3540047010'>
+<Nary_Exp op='{' typref='1315527325'>
+<Binary_Exp op='|-&gt;' typref='1315550396'>
+<Id value='ss' typref='555065967'/>
+<Id value='ss2' typref='3029594684'/>
+</Binary_Exp>
+</Nary_Exp>
+<Id value='grade_list_student_subject' typref='3540047010'/>
+</Binary_Exp>
+</Unary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='5' typref='2701647786'/>
+<Integer_Literal value='10' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Assignement_Sub>
+<Variables>
+<Id value='status' typref='2246778642'/>
+</Variables>
+<Values>
+<Id value='Approved' typref='2246778642'/>
+</Values>
+</Assignement_Sub>
+</Then>
+<Else>
+<Assignement_Sub>
+<Variables>
+<Id value='status' typref='2246778642'/>
+</Variables>
+<Values>
+<Id value='Failed' typref='2246778642'/>
+</Values>
+</Assignement_Sub>
+</Else>
+</If_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='917286058'>
+<Unary_Exp op='POW'>
+<Id value='PERSON'/>
+</Unary_Exp>
+</Type>
+<Type id='515940807'>
+<Unary_Exp op='POW'>
+<Id value='STATUS'/>
+</Unary_Exp>
+</Type>
+<Type id='2246778642'>
+<Id value='STATUS'/>
+</Type>
+<Type id='3467165232'>
+<Unary_Exp op='POW'>
+<Id value='COURSE'/>
+</Unary_Exp>
+</Type>
+<Type id='432315463'>
+<Unary_Exp op='POW'>
+<Id value='SUBJECT'/>
+</Unary_Exp>
+</Type>
+<Type id='2989696607'>
+<Unary_Exp op='POW'>
+<Id value='Bool'/>
+</Unary_Exp>
+</Type>
+<Type id='2248242994'>
+<Unary_Exp op='POW'>
+<Id value='GRADE'/>
+</Unary_Exp>
+</Type>
+<Type id='3481042974'>
+<Unary_Exp op='POW'>
+<Id value='GRADE_SUM'/>
+</Unary_Exp>
+</Type>
+<Type id='3437676185'>
+<Unary_Exp op='POW'>
+<Id value='GRADE_NUM'/>
+</Unary_Exp>
+</Type>
+<Type id='3963904086'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='PERSON'/>
+<Id value='COURSE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1200354851'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='COURSE'/>
+<Id value='SUBJECT'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1315527325'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='PERSON'/>
+<Id value='SUBJECT'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3435983791'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='PERSON'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3540047010'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Binary_Exp op='*'>
+<Id value='PERSON'/>
+<Id value='SUBJECT'/>
+</Binary_Exp>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3817003670'>
+<Unary_Exp op='POW'>
+<Generic_Type/>
+</Unary_Exp>
+</Type>
+<Type id='1229683318'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='COURSE'/>
+<Id value='SUBJECT'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3992351917'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='PERSON'/>
+<Id value='COURSE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3481526908'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='PERSON'/>
+<Id value='SUBJECT'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2177777335'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Binary_Exp op='*'>
+<Id value='PERSON'/>
+<Id value='SUBJECT'/>
+</Binary_Exp>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='351536106'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='PERSON'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='555065967'>
+<Id value='PERSON'/>
+</Type>
+<Type id='3029594684'>
+<Id value='SUBJECT'/>
+</Type>
+<Type id='2696969577'>
+<Id value='COURSE'/>
+</Type>
+<Type id='1691190710'>
+<Binary_Exp op='*'>
+<Id value='COURSE'/>
+<Id value='SUBJECT'/>
+</Binary_Exp>
+</Type>
+<Type id='3247575533'>
+<Binary_Exp op='*'>
+<Id value='PERSON'/>
+<Id value='COURSE'/>
+</Binary_Exp>
+</Type>
+<Type id='1222394154'>
+<Binary_Exp op='*'>
+<Id value='PERSON'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='1315550396'>
+<Binary_Exp op='*'>
+<Id value='PERSON'/>
+<Id value='SUBJECT'/>
+</Binary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>

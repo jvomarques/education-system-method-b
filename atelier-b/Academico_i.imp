@@ -1,0 +1,102 @@
+
+/* Academico_i
+ * Author: 
+ * Creation date: 02/12/19
+ */
+
+IMPLEMENTATION Academico_i
+REFINES Academico
+
+
+VALUES PERSON = 0 .. 20 ; COURSE = 0 .. 20 ; SUBJECT = 0 .. 20; Bool = 0..1; 
+    GRADE = 0..10;
+    GRADE_SUM = 0..100;
+    GRADE_NUM = 0..100
+    
+CONCRETE_VARIABLES
+    student_i ,
+    teacher_i ,
+    student_list_course_i ,
+    course_subject_list_i ,
+    test_list_i 
+    , student_grade_sum_i
+    , student_grade_num_i
+    , grade_list_student_subject_i
+
+
+INVARIANT
+    student_i : PERSON --> Bool &
+    teacher_i : PERSON --> Bool &
+    course_subject_list_i : ( COURSE * SUBJECT ) --> Bool &
+    student_list_course_i : ( PERSON * COURSE ) --> Bool &
+    test_list_i : ( PERSON * SUBJECT ) --> Bool 
+    & student_grade_sum_i : PERSON --> NAT 
+    & student_grade_num_i : PERSON --> NAT 
+    & grade_list_student_subject_i :  ((PERSON * SUBJECT)) --> GRADE  
+    
+    & student_i ~ [ { 1 } ] = student &
+    teacher_i ~ [ { 1 } ] = teacher &
+    course_subject_list_i ~ [ { 1 } ] = course_subject_list &
+    student_list_course_i ~ [ { 1 } ] = student_list_course &
+    test_list_i ~ [ { 1 } ] = test_list 
+//    & student_grade_sum_i ~ [ { 1 } ] = student_grade_sum
+//    & student_grade_num_i ~ [ { 1 } ] = student_grade_num
+//    & grade_list_student_subject_i ~ [ { 1 } ] = grade_list_student_subject
+
+INITIALISATION
+    student_i := PERSON * { 0 };
+    teacher_i := PERSON * { 0 };
+    course_subject_list_i := COURSE * SUBJECT * { 0 } ;
+    student_list_course_i := PERSON * COURSE * { 0 } ;
+    test_list_i := PERSON * SUBJECT * { 0 }; 
+    student_grade_sum_i := PERSON * { 0 }; 
+    student_grade_num_i := PERSON * { 0 };
+    grade_list_student_subject_i := (PERSON * SUBJECT) * { 0 }
+
+OPERATIONS
+    
+    addStudent (ss) =
+        BEGIN
+        student_i (ss) := 1 
+    END;
+ 
+   addTeacher (tt) =
+        BEGIN
+        teacher_i (tt) := 1 
+    END;
+    
+    addSubjectToCourse ( ss , cc ) =
+        BEGIN
+        course_subject_list_i ( ( ss |-> cc ) ) := 1 
+    END;
+    
+    registerStudent ( ss , cc ) =
+        BEGIN
+        student_list_course_i ( ( ss |-> cc ) ) := 1 
+    END;
+    
+    doTest ( ss , ss2 ) =
+        BEGIN
+        test_list_i ( ( ss |-> ss2 ) ) := 1 
+    END;
+    
+    registerGrade(ss, ss2, gg) =
+    BEGIN 
+        grade_list_student_subject_i((ss |-> ss2 )) := gg;
+        student_grade_sum_i ( ss ) := student_grade_sum_i ( ss ) + gg;
+        student_grade_num_i ( ss ) := student_grade_num_i ( ss ) + 1        
+    END;
+    
+    ira <-- getIRA(ss) = ira := student_grade_sum_i(ss) / student_grade_num_i(ss);
+    
+    status <-- isApproved(ss, ss2) =
+        BEGIN
+            VAR avg IN 
+                avg := grade_list_student_subject_i(ss |-> ss2);
+                IF avg > 5 
+                    THEN status := Approved
+                ELSE status := Failed 
+                END
+            END
+        END    
+ END
